@@ -1,0 +1,47 @@
+None
+host: iscb011.mskcc.org
+Building DAG of jobs...
+SLURM run ID: 35feac25-3fc8-4a36-9061-b8728c325ce8
+Using shell: /usr/bin/bash
+Provided remote nodes: 10
+Job stats:
+job                             count
+----------------------------  -------
+all                                 1
+mPileup_HapModStrandSpecific        1
+total                               2
+
+Select jobs to execute...
+Execute 1 jobs...
+[Mon Apr 21 15:20:08 2025]
+rule mPileup_HapModStrandSpecific:
+    input: /data1/greenbab/projects/triplicates_epigenetics_diyva/DNA/preprocessed/D-0-1_4000_haplotagged_5mCcoPhased_Authorscomment.bam
+    output: /data1/greenbab/users/ahunos/apps/workflows/methylation_workflows/modkit_wf/mPileup_HapModStrandSpecific/D01_4000/D01_4000.done
+    jobid: 1
+    reason: Missing output files: /data1/greenbab/users/ahunos/apps/workflows/methylation_workflows/modkit_wf/mPileup_HapModStrandSpecific/D01_4000/D01_4000.done
+    wildcards: sample=D01_4000
+    resources: mem_mb=2857, mem_mib=2725, disk_mb=2857, disk_mib=2725, tmpdir=<TBD>, slurm_partition=cpushort, slurm_account=greenbab, runtime=20, mem_mb_per_cpu=12000, cpus_per_task=8, nodes=1
+Shell command: 
+        mkdir -p /data1/greenbab/users/ahunos/apps/workflows/methylation_workflows/modkit_wf/mPileup_HapModStrandSpecific/D01_4000
+
+        ~/.cargo/bin/modkit pileup --threads 16                  --prefix D01_4000         --motif CG 0         --ref /data1/greenbab/database/mm10/mm10.fa         --partition-tag HP         --region chr19         --log-filepath /data1/greenbab/users/ahunos/apps/workflows/methylation_workflows/modkit_wf/mPileup_HapModStrandSpecific/D01_4000/D01_4000.log         /data1/greenbab/projects/triplicates_epigenetics_diyva/DNA/preprocessed/D-0-1_4000_haplotagged_5mCcoPhased_Authorscomment.bam         /data1/greenbab/users/ahunos/apps/workflows/methylation_workflows/modkit_wf/mPileup_HapModStrandSpecific/D01_4000 && touch /data1/greenbab/users/ahunos/apps/workflows/methylation_workflows/modkit_wf/mPileup_HapModStrandSpecific/D01_4000/D01_4000.done
+        
+Job 1 has been submitted with SLURM jobid 4726432 (log: /data1/greenbab/users/ahunos/apps/workflows/methylation_workflows/modkit_wf/.snakemake/slurm_logs/rule_mPileup_HapModStrandSpecific/D01_4000/4726432.log).
+Waiting for more resources.
+[Mon Apr 21 15:21:08 2025]
+Finished jobid: 1 (Rule: mPileup_HapModStrandSpecific)
+1 of 2 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Mon Apr 21 15:21:08 2025]
+localrule all:
+    input: /data1/greenbab/users/ahunos/apps/workflows/methylation_workflows/modkit_wf/mPileup_HapModStrandSpecific/D01_4000/D01_4000.done
+    jobid: 0
+    reason: Input files updated by another job: /data1/greenbab/users/ahunos/apps/workflows/methylation_workflows/modkit_wf/mPileup_HapModStrandSpecific/D01_4000/D01_4000.done
+    resources: mem_mb=1000, mem_mib=954, disk_mb=1000, disk_mib=954, tmpdir=/tmp, slurm_partition=cpushort, slurm_account=greenbab, runtime=20, mem_mb_per_cpu=12000, cpus_per_task=8, nodes=1
+Shell command: None
+Waiting for more resources.
+[Mon Apr 21 15:21:08 2025]
+Finished jobid: 0 (Rule: all)
+2 of 2 steps (100%) done
+Complete log(s): /data1/greenbab/users/ahunos/apps/workflows/methylation_workflows/modkit_wf/.snakemake/log/2025-04-21T152008.199415.snakemake.log
