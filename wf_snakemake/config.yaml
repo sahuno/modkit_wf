@@ -24,9 +24,12 @@ modkit_entropyMotifs: "--motif CG 0"
 # modkit_entropy_extraArgs: "--combine-strands"
 # modkit_entropy_extraArgs: "--combine-strands 4 --window-size 50"
 
-##modkit pileup
+##modkit pileup configs
 pileupRegion: chr19
 # pileupBedgraph: True
+
+# summary configs
+modFullSummary: "--only-mapped --no-sampling"
 
 # mm10: /data1/greenbab/database/mm10/mm10.fa
 # ref: /data1/greenbab/database/hg38/v0/Homo_sapiens_assembly38.fasta
