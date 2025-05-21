@@ -11,7 +11,7 @@ configfile: "/data1/greenbab/projects/Sarcoma_DNAme/scripts/configs/config.yaml"
 configfile: "/data1/greenbab/projects/Sarcoma_DNAme/scripts/configs/samples_markDup.yaml"
 
 SAMPLES = list(config["samples"].keys())
-WKDIR = WKDIR = config.get("workdir", ".")
+WKDIR = config.get("workdir", ".")
 
 chr_names = []
 with open(config["hg38_chrSizes"]) as f:
